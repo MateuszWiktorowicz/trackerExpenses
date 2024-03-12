@@ -1,0 +1,12 @@
+{
+    "name": "wikto/tracker-expenses",
+    "description": "PHP app for tracking expenses",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/Framework",
+            "App\\": "src/App"
+        }
+    }
+}
