@@ -8,4 +8,8 @@ use Framework\App;
 
 $app = new App();
 
+$app->getRoute('/');
+
+dd($app);
+
 return $app;
