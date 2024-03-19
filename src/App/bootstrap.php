@@ -7,7 +7,6 @@ require __DIR__ . "/../../vendor/autoload.php";
 use Framework\App;
 use App\Config\Paths;
 
-//include __DIR__ . "/Config/Middleware.php";
 
 use function App\Config\{registerRoutes, registerMiddleware};
 
