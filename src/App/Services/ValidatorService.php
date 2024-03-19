@@ -19,6 +19,14 @@ class ValidatorService
 
     public function validateRegister(array $dataForm)
     {
-        $this->validator->validate($dataForm);
+        $this->validator->validate($dataForm, [
+            'email' => ['required'],
+            'age' => ['required'],
+            'country' => ['required'],
+            'socialMediaURL' => ['required'],
+            'password' => ['required'],
+            'confirmPassword' => ['required'],
+            'tos' => ['required']
+        ]);
     }
 }
