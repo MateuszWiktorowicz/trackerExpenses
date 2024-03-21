@@ -58,7 +58,7 @@ class Container
     public function get(string $id)
     {
         if (!array_key_exists($id, $this->definitions)) {
-            throw new ContainerException("Class {$id} does not exist in contaienr");
+            throw new ContainerException("Class {$id} does not exist in container");
         }
 
         if (array_key_exists($id, $this->resolved)) {
@@ -66,7 +66,7 @@ class Container
         }
 
         $factory = $this->definitions[$id];
-        $dependencies = $factory();
+        $dependencies = $factory($this);
 
         $this->resolved[$id] = $dependencies;
 

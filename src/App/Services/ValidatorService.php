@@ -41,4 +41,12 @@ class ValidatorService
             'tos' => ['required']
         ]);
     }
+
+    public function validateLogin(array $dataForm)
+    {
+        $this->validator->validate($dataForm, [
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+    }
 }
